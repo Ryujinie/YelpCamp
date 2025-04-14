@@ -1,0 +1,55 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="container d-flex justify-content-center align-items-center">
+
+    <div class="row flex-fill">
+
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            
+            <div class="card shadow">
+
+                <img src="../../assets/register_image.jpg" alt="" class="card-img-top">
+
+                <div class="card-body">
+
+                    <h5 class="card-title text-center">Register</h5>
+                    
+                    <form action="/register" method="POST" class="form-validate" novalidate>
+
+                        <div class="mb-3">
+            
+                            <div>
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" class="form-control" name="username" placeholder="type here" autofocus>
+                                <div class="invalid-feedback">
+                                    Field required.
+                                </div>
+                            </div>
+            
+                            <div class="mt-2">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" class="form-control" name="email" placeholder="type here">
+                                <div class="invalid-feedback">
+                                    Field required.
+                                </div>
+                            </div>
+            
+                            <div class="mt-2">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-control" name="password" placeholder="type here">
+                                <div class="invalid-feedback">
+                                    Field required.
+                                </div>
+                            </div>
+            
+                        </div>
+            
+                        <button class="btn btn-primary col-12">Sign Up</button>
+            
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

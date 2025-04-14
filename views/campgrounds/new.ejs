@@ -1,0 +1,82 @@
+<% layout('layouts/boilerplate') %>
+
+    <div class="row">
+        <h1 class="text-center">New Campground</h1>
+
+        <div class="newCampForm col-md-6 offset-md-3 mt-4">
+
+            <form action="/campgrounds" method='POST' class="form-validate" novalidate enctype="multipart/form-data">
+
+                <div class="campNameInput mb-3">
+                    <label for="title" class="form-label">Camp name: </label>
+                    <input type="text" class="form-control" id="title" name="campground[title]"
+                        placeholder="type here..." required>
+                    </input>
+                    <div class="invalid-feedback">
+                        Required field.
+                    </div>
+                </div>
+
+                <label for="price" class="form-label">Price: </label>
+                <div class="campPriceInput input-group mb-3">
+                    <span class="input-group-text">Php</span>
+                    <input type="number" class="form-control" id="price" name="campground[price]"
+                        aria-label="Amount (to the nearest dollar)" required>
+                    <div class="invalid-feedback">
+                        Required field.
+                    </div>
+                </div>
+
+
+                <div class="campDescInput mb-3">
+                    <label for="description" class="form-label">Description: </label>
+                    <textarea class="form-control" name="campground[description]" id="description" rows='4' col='20'
+                        placeholder="type here..." required></textarea>
+                    <div class="invalid-feedback">
+                        Required field.
+                    </div>
+                </div>
+
+                <div class="campLocInput mb-3">
+                    <label for="location" class="form-label">Location: </label>
+                    <input type="text" class="form-control" id="location" name="campground[location]"
+                        placeholder="type here..." required>
+                    </input>
+                    <div class="invalid-feedback">
+                        Required field.
+                    </div>
+                </div>
+
+                <!-- <div class="mb-4">
+                    <div class="form-file custom-file">
+                        <input type="file" class="form-file-input" id="image" name="image" multiple>
+                        <label for="image" class="form-file-label">
+                            <span class="form-file-text custom-file-label">Choose images</span>
+                            <span class="form-file-button">Browse</span>
+                        </label>
+                    </div>
+                </div> -->
+
+                <div class="mb-4">
+                    <label for="image" class="form-label">Image(s)</label>
+                    <input class="form-control" type="file" id="image" name="image" multiple>
+                  </div>
+
+                <!-- <label for="form-file" class="form-label">Image</label> -->
+                <!-- <div class="input-group mb-4">
+                    <span class="input-group-text" id="basic-addon3">URL:</span>
+                    <input type="text" class="form-control" id="image-url" name="campground[image]"
+                        aria-describedby="basic-addon3" required>
+                    <div class="invalid-feedback">
+                        Required field.
+                    </div>
+                </div> -->
+
+                <div class="mb-5">
+                    <button type="submit" class="btn btn-success" required>Add Campground</button>
+                    <a href="/campgrounds" class="btn btn-secondary">Back</a>
+                </div>
+                
+        </div>
+    </div>
+    </form>
